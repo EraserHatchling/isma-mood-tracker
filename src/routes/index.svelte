@@ -1,6 +1,8 @@
 
 <script>
     import supabase from '$lib/db';
+    import Signup from "$lib/signup.svelte"
+    import Login from "$lib/login.svelte"
 
     async function logout() {
    	 const { error } = await supabase.auth.signOut();
@@ -21,3 +23,4 @@
     <button class="btn btn-secondary" on:click={logout}>Logout</button>
 </section>		
 
+<Signup />
